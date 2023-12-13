@@ -1,0 +1,36 @@
+product-url: http://localhost:8080
+
+originator: KinesisProducer
+
+spring:
+  cloud:
+    stream:
+      function:
+        definition: processProduct
+      bindings:
+        processProduct-in-0:
+          destination: product_stream
+          content-type: text/plain
+
+logging:
+  level:
+    com:
+      amazonaws: INFO
+
+
+cloud:
+  aws:
+    credentials:
+      accessKey: localstack
+      secretKey: localstack
+    region:
+      static: sa-east-1
+    kinesis:
+      url: http://localhost:4566
+    dynamodb:
+      url: http://127.0.0.1:4566
+    stack:
+      auto: false
+
+server:
+  port: 9041
