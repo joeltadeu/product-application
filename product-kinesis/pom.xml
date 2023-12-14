@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.kinesis</groupId>
-    <artifactId>product-consumer</artifactId>
+    <artifactId>product-kinesis</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>product-kinesis</name>
     <description>product-kinesis</description>
@@ -18,6 +18,7 @@
         <spring-cloud.version>2023.0.0</spring-cloud.version>
         <spring-cloud-stream-binder-kinesis.version>4.0.0</spring-cloud-stream-binder-kinesis.version>
         <aws-java-sdk-kinesis.version>1.12.610</aws-java-sdk-kinesis.version>
+        <aws-java-sdk-dynamodb.version>1.12.610</aws-java-sdk-dynamodb.version>
     </properties>
     <dependencies>
         <dependency>
@@ -42,11 +43,15 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-kinesis -->
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-kinesis</artifactId>
             <version>${aws-java-sdk-kinesis.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-dynamodb</artifactId>
+            <version>${aws-java-sdk-dynamodb.version}</version>
         </dependency>
     </dependencies>
     <dependencyManagement>
