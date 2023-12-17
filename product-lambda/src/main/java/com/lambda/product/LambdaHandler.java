@@ -16,7 +16,7 @@ public class LambdaHandler implements RequestStreamHandler {
     private static SpringBootLambdaContainerHandler<AwsProxyRequest, AwsProxyResponse> handler;
     static {
         try {
-            handler = SpringBootLambdaContainerHandler.getAwsProxyHandler(Application.class);
+            handler = SpringBootLambdaContainerHandler.getAwsProxyHandler(ProductLambdaApplication.class);
             // If you are using HTTP APIs with the version 2.0 of the proxy model, use the getHttpApiV2ProxyHandler
             // method: handler = SpringBootLambdaContainerHandler.getHttpApiV2ProxyHandler(Application.class);
         } catch (ContainerInitializationException e) {

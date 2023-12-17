@@ -1,5 +1,0 @@
-product-url: http://localhost:8080
-
-kinesis:
-  stream: "product-kinesis-stream"
-

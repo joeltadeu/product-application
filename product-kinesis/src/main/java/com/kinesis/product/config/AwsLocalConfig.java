@@ -24,7 +24,7 @@ import java.net.URI;
 
 @Profile("local")
 @Configuration
-public class AwsConfig {
+public class AwsLocalConfig {
     @Value("${cloud.aws.region.static}")
     private String region;
 

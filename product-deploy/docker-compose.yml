@@ -11,7 +11,8 @@ services:
       - DOCKER_HOST=unix:///var/run/docker.sock
     volumes:
       - "./localstack/dynamodb/init-dynamodb.sh:/etc/localstack/init/ready.d/init-dynamodb.sh"
-      - "./localstack/kinesis/init-kinesis.sh:/etc/localstack/init/ready.d/init-kinesis.sh"# ready hook
+      - "./localstack/kinesis/init-kinesis.sh:/etc/localstack/init/ready.d/init-kinesis.sh"
+      - "./localstack/s3/init-s3.sh:/etc/localstack/init/ready.d/init-s3.sh"
       - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
       - "/var/run/docker.sock:/var/run/docker.sock"
 

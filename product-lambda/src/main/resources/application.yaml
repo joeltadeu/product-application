@@ -5,3 +5,7 @@ config:
       url: http://127.0.0.1:4566
       access-key: localstack
       secret-key: localstack
+    s3:
+      url: http://127.0.0.1:4566
+      access-key: localstack
+      secret-key: localstack
